@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://PlayerCamera.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=5]
+height = 1.0
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 1, 0.866667, 0, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.336607, 0.309407, 0.72051 )
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19185, -0.128623 )
+far = 8192.0
+script = ExtResource( 2 )
+
+[node name="RayCast" type="RayCast" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.355464 )
+enabled = true
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="SwingLine" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, -0.0322307, 0.99948, 0, -0.99948, -0.0322307, 1.605, -0.646, -1.643 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Camera/SwingLine"]
+transform = Transform( 0.125, 0, 0, 0, -5.58794e-08, -0.125, 0, 0.999999, -6.98492e-09, 0, 0, -0.5 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.727944, 0 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.642848, 0 )
+visible = false
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

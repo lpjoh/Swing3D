@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Building.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0, 0.623529, 1, 1 )
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="Environment" id=4]
+ambient_light_color = Color( 0.407843, 0.407843, 0.407843, 1 )
+dof_blur_far_distance = 148.43
+glow_bicubic_upscale = true
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.69853, -9.02186 )
+
+[node name="Building" type="StaticBody" parent="."]
+transform = Transform( 1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Building"]
+transform = Transform( 1, 4.71636e-05, -2.55506e-05, -4.71636e-05, 1, 0.000184341, 2.55506e-05, -0.000184341, 1, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Building"]
+shape = SubResource( 2 )
+
+[node name="Building2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, -11.4307, 11.6758, 38.0794 )
+
+[node name="Building3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 71.3156, 60.2115, -11.0266 )
+
+[node name="Building4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 17.8712, 0, 5.16667, 0, 43.5374, 0, -4.42598, 0, 20.8619, -98.5307, 41.1779, 2.12119 )
+
+[node name="Building5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.47774, 0, 9.86764, 0, 72.9871, 0, -17.8583, 0, -2.47419, -15.7844, 46.1814, -46.9848 )
+
+[node name="Building6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 43.9453, 17.9748, -87.7283 )
+
+[node name="Building7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 126.692, 51.008, -136.834 )
+
+[node name="Building8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, -43.1547, 8.14031, -123.687 )
+
+[node name="Building9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 13.669, 0, -8.2812, 0, 91.2908, 0, 8.69974, 0, 13.0114, 39.5915, 60.2115, -172.793 )
+
+[node name="Building10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, -11.4307, 36.4281, 281.595 )
+
+[node name="Building11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 15.6713, 0, 5.33948, 0, 72.9871, 0, -9.6633, 0, 8.65921, 71.3156, 60.2115, 232.489 )
+
+[node name="Building12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, -98.5307, 3.16336, 245.637 )
+
+[node name="Building13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 10.7723, 0, -8.25, 0, 72.9871, 0, 14.9307, 0, 5.95227, -15.7844, 37.8046, 196.531 )
+
+[node name="Building14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 11.828, 0, 16.4702, 0, 43.5374, 0, -14.1091, 0, 13.8074, 43.9453, 36.4281, 155.787 )
+
+[node name="Building15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 15.8068, 0, 5.21608, 0, 72.9871, 0, -9.43997, 0, 8.7341, 126.692, 60.2115, 106.681 )
+
+[node name="Building16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 10.0694, 0, 17.9929, 0, 43.5374, 0, -15.4135, 0, 11.7545, -43.1547, 36.4281, 119.829 )
+
+[node name="Building17" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 39.5915, 30.9157, 70.7231 )
+
+[node name="Building18" parent="." instance=ExtResource( 2 )]
+transform = Transform( 14.9358, 0, 12.5669, 0, 43.5374, 0, -10.7653, 0, 17.4353, 131.09, 36.4281, 37.8232 )
+
+[node name="Building19" parent="." instance=ExtResource( 2 )]
+transform = Transform( 16.803, 0, -4.15804, 0, 72.9871, 0, 7.52515, 0, 9.28454, 213.836, 60.2115, -11.2829 )
+
+[node name="Building20" parent="." instance=ExtResource( 2 )]
+transform = Transform( 16.6228, 0, -9.23976, 0, 43.5374, 0, 7.91516, 0, 19.4047, 43.9897, 36.4281, 1.86492 )
+
+[node name="Building21" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 126.736, 39.1558, -47.2411 )
+
+[node name="Building22" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 186.466, 36.4281, -87.9846 )
+
+[node name="Building23" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 269.212, 60.2115, -137.091 )
+
+[node name="Building24" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 99.3657, 36.4281, -123.943 )
+
+[node name="Building25" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 182.112, 60.2115, -173.049 )
+
+[node name="Building26" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 131.09, 36.4281, 281.339 )
+
+[node name="Building27" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 213.836, 60.2115, 232.233 )
+
+[node name="Building28" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 43.9897, 36.4281, 245.381 )
+
+[node name="Building29" parent="." instance=ExtResource( 2 )]
+transform = Transform( 15.3398, 0, -5.62571, 0, 72.9871, 0, 10.1813, 0, 8.47604, 126.736, 60.2115, 196.275 )
+
+[node name="Building30" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 186.466, 36.4281, 155.531 )
+
+[node name="Building31" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 269.212, 60.2115, 106.425 )
+
+[node name="Building32" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 43.5374, 0, 0, 0, 21.4922, 99.3657, 36.4281, 119.573 )
+
+[node name="Building33" parent="." instance=ExtResource( 2 )]
+transform = Transform( 18.4111, 0, 0, 0, 72.9871, 0, 0, 0, 10.1731, 182.112, 39.729, 70.4668 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.363314, -0.926417, -0.0987645, 0.0639245, -0.130546, 0.989379, -0.929471, 0.353142, 0.10665, 1.30855, 115.724, -131.755 )
+light_energy = 9.073
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
